@@ -20,6 +20,7 @@ Ideal for strategy backtesting based on:
 - On the left is the terminal output from the script.
 - On the right is ExoCharts' delta cluster view for the same candle.
 - This confirms that the script correctly reconstructs price clusters, delta, and imbalance levels.
+- *Note: The 1-hour difference in timestamp is due to local timezone settings.
 
 ![ExoCharts-comparison](https://github.com/user-attachments/assets/d894c1dd-7ada-49fd-a56f-c8ceef2aea1c)
 
