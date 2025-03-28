@@ -54,14 +54,16 @@ for minute in unique_minutes:
     else:
         cvd_div = "No Divergence"
 
-    print(f"\nCandle: {minute.strftime('%Y-%m-%d %H:%M')}, High: {high}, Low: {low}, Trades: {len(trades)}")
+    print(f"\nCandle: {minute.strftime('%Y-%m-%d %H:%M')}, High: {high}, Low: {low}, Trades: {len(trades)}\n")
+
     for level in sorted(clusters.keys(), reverse=True):
         buy_vol = clusters[level]['buy']
         sell_vol = clusters[level]['sell']
         delta = buy_vol - sell_vol
         imbalance = buy_vol == 0 or sell_vol == 0
 
-        display_level = level + 5  # Shift visual level by $5
+        # Visual offset: shift printed level -5 USD
+        display_level = level - 5
         line = f"Cluster ${display_level:.0f} - ${display_level + CLUSTER_SIZE:.0f} | Sell: {sell_vol:.4f}  ||  Buy: {buy_vol:.4f}  ||  Δ: {delta:.4f}"
         if imbalance:
             line += " | Imbalance: YES"
