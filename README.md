@@ -3,7 +3,7 @@
 This is a lightweight Python tool that reconstructs delta clusters from Binance trade data — similar to ExoCharts' visualization — for backtesting and signal research.
 
 ## Features
-- Rebuilds 1-minute candles from raw trade data
+- Rebuilds 1-minute candles from Binance trade data
 - Splits price into customizable cluster sizes (default: 100 ticks / $10)
 - Calculates buy/sell volume, delta, and imbalance at each price level
 - Highlights potential divergence or extreme orderflow setups
